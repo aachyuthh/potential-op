@@ -25,3 +25,17 @@ def PrimeSum(A):
     return 0,0
 
 print(PrimeSum(20))
+
+def reverse(num):
+    '''
+        Important to check that the number doesnt't exceed the INT_MAX or INT_MIN in java
+        In python int and long are dynamic concepts
+        Also simply reversing the interger using [::-1] may result in trailing zeros
+    '''
+    if num<0:
+        result = -1 * int( str(num)[::-1] )
+    else:
+        result =  int( str(num)[::-1] )
+    if abs(result) > 2**31 -1:
+        return 0
+    return result
